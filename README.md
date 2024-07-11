@@ -1,6 +1,7 @@
 # Reconocimiento de Medicamentos con IA | IAMed
 
 * Descripción del Proyecto
+  
   Nuestro proyecto se trata de una app que permita a las personas conocer las indicaciones de las medicinas que deseen, a través de la cámara mostraran la caja
   de su medicamento, y la aplicación les mostrará su nombre, descripción, fórmula, dosis y si necesita o no receta médica.
 
@@ -11,7 +12,9 @@
   ![image](https://github.com/user-attachments/assets/7a4de4f7-35df-4ac5-af9e-cf6de8f60f1e)
 
 * Arquitectura del proyecto
+  
   Librerias:
+  
   mysql.connector, torch, opencv, numpy, pathlib, tkinter, setuptools, Pillow, requests, pandas, pyttsx3 (Esta fue utilizada para la narración),
   threading.
 
@@ -23,6 +26,7 @@
 * Proceso de desarrollo:
 
 -Fuente del dataset
+
  El dataset lo creamos nosotros mismos, descargando varias imágenes y creando sus etiquetas, lo pueden ver en nuestra carpeta Data en el repositorio.
  Por ahora nuestro dataset solo detecta 4 medicamentos:
 
@@ -33,22 +37,28 @@
  ![image](https://github.com/user-attachments/assets/51ee3a4b-7da6-4d87-ab33-3a0acba47aa1)
 
  Ejemplo de imágenes:
+ 
  ![image](https://github.com/user-attachments/assets/6bc659e9-f50c-4322-bc2c-7965b07e5172)
  
 -Manejo excepciones/control errores
+
  En el mismo programa se controlan diferentes errores, por ejemplo en caso de haber un error al cargar el modelo de IA o al tratar de mapear los datos
  de la Base de Datos en la aplicación.
 
 -¿Qué modelo de Machine Learning están usando?
+
 Estamos utilizando el modelo de machine learning YOLOv5 (You Only Look Once, versión 5) para la detección de objetos. 
 
 -Estadística
+
 Creando un escenario ficticio en el que nuestra aplicación sale al mercado, podriamos disminuir la cantidad de muertes causadas por la automedicación:
 
 ![image](https://github.com/user-attachments/assets/59a3ff04-e450-4c3d-81fa-78b5a54b3745)
 
 -Nuestra aplicación proporciona información precisa sobre los medicamentos, incluyendo dosis y posibles interacciones, lo cual reduce significativamente los riesgos asociados con la automedicación.
+
 -Utilizando el modelo YOLOv5, la aplicación puede identificar medicamentos de manera rápida y precisa, asegurando que los usuarios reciban información en tiempo real.
+
 -Al reducir la probabilidad de consumir medicamentos incorrectos o en dosis incorrectas, la aplicación puede prevenir errores comunes que conducen a hospitalizaciones y muertes.
 
 -Métricas de Evaluación del Modelo
@@ -60,6 +70,7 @@ Creando un escenario ficticio en el que nuestra aplicación sale al mercado, pod
 * Funcionalidades:
   
 -Una de sus funciones es leer los datos que muestra la aplicación para tener una forma de escuchar las indicaciones.
+
 -Su principal función es la de detectar medicamentos a través de la cámara, para posteriormente mostrar sus datos:
 
  ![image](https://github.com/user-attachments/assets/edac96a8-59ef-4d32-88c6-3cee4db4e34e)
